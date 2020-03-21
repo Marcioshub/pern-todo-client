@@ -8,7 +8,7 @@ export default function EditTodo(props) {
     try {
       const body = { description };
       const response = await fetch(
-        `http://localhost:5000/todos/${props.todo.todo_id}`,
+        `${process.env.REACT_APP_SERVER}${props.todo.todo_id}`,
         {
           method: "PUT",
           headers: {
