@@ -19,7 +19,7 @@ export default function ListTodo() {
 
   async function getTodos() {
     try {
-      const response = await fetch("http://localhost:5000/todos");
+      const response = await fetch(process.env.REACT_APP_SERVER);
       const jsonData = await response.json();
 
       setTodos(jsonData);
